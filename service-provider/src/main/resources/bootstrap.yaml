@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: service-provider
+  cloud:
+    nacos:
+      username: ${NACOS_USER:nacos}
+      password: ${NACOS_PASSWORD:nacos}
+      config:
+        server-addr: ${NACOS_SERVER:localhost:8848}
+        namespace: local
+        file-extension: yml
+      discovery:
+        server-addr: ${NACOS_SERVER:localhost:8848}
+        namespace: local
